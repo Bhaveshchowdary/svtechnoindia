@@ -1,0 +1,26 @@
+/* RESET BROWSER DEFAULTS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default body space */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent unwanted white border around sections */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #000; /* temporary to test full-width hero */
+}
+
+/* Allow hero slider to stretch full width */
+.hero-slider {
+  margin: 0 !important;
+  padding: 0 !important;
+}

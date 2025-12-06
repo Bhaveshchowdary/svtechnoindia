@@ -1,0 +1,194 @@
+.hero-slider {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 700px;
+  margin-left: 5%;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #FACC15;  /* Yellow */
+}
+
+.hero-btn {
+  margin-top: 1.5rem;
+  padding: 12px 26px;
+  background: #FACC15;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arrow-btn {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+/* Effect for slider change */
+.hero-arrows {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fade container */
+.hero-bg-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Background image default styling */
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45);
+  position: absolute;
+  inset: 0;
+}
+
+/* SMOOTH FADE EFFECT */
+.fade-image {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.hero-slider {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+}
+
+/* both images on top of each other */
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  transition: opacity 1.2s ease-in-out;
+  filter: brightness(0.45);
+}
+
+/* dissolve states */
+.fade-in {
+  opacity: 1;
+  z-index: 2;
+}
+
+.fade-out {
+  opacity: 0;
+  z-index: 1;
+}
+
+.visible-img {
+  opacity: 1;
+}
+
+.hidden-img {
+  opacity: 0;
+}
+
+/* overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.35);
+  z-index: 3;
+}
+
+/* text */
+.hero-content {
+  position: relative;
+  z-index: 4;
+  max-width: 700px;
+  margin-left: 5%;
+  top: 20%;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #FACC15;
+  font-weight: 800;
+}
+
+.hero-btn {
+  margin-top: 1.5rem;
+  padding: 12px 26px;
+  background: #FACC15;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* arrows */
+.arrow-btn {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.hero-arrows {
+  position: absolute;
+  right: 40px;
+  top: 45%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+}

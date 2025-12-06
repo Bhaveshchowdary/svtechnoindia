@@ -1,0 +1,116 @@
+/* ==========================
+   TOP BAR
+   ========================== */
+
+.top-bar {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 6px 4%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.top-left span {
+  margin-right: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-right a {
+  color: #facc15;
+  font-weight: 600;
+}
+
+
+/* ==========================
+   MAIN NAV BAR
+   ========================== */
+
+.nav-bar {
+  background: #1f2937;
+  padding: 12px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+/* Logo left */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 48px;
+}
+
+.company-name {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 60px;
+  font-size: 1rem;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #facc15;
+  text-decoration: none;
+}
+
+
+/* RIGHT SIDE */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.call-box {
+  text-align: right;
+}
+
+.call-label {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.call-number {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #facc15;
+}
+
+.call-icon {
+  font-size: 1.3rem;
+  background: #ffffff15;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
