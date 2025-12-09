@@ -1,0 +1,199 @@
+:root{
+  --max-w: 1200px;
+  --teal: #18b7b3;
+  --muted: #6b7280;
+  --gold: #facc15;
+
+  --card-radius: 14px;
+  --page-pad: 60px;
+  --hero-h: 260px; /* height of the hero band (tweak if needed) */
+}
+
+/* SECTION wrapper */
+.company-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Content area: like clients-content in your example */
+.company-content {
+  position: relative;
+  padding: 38px 20px 80px;
+  background: transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* full-width background image (same approach as clients) */
+.company-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;        /* FULL width of screen */
+  height: 100%;
+  transform: translateX(-50%);
+
+  background-image: url("/company2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.6;       /* control opacity here */
+  z-index: -1;
+}
+
+/* darker overlay only in the top hero band to make text readable */
+.company-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: var(--hero-h);
+  transform: translateX(-50%);
+  /* background: rgba(255, 255, 255, 0.48); */
+  z-index: 0;
+}
+
+/* HERO title container (centered) */
+.company-hero-inner {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 64px;
+  position: relative;
+  z-index: 2;
+}
+
+/* hero heading style */
+.company-title {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+}
+
+/* central container for content (keeps same max width as clients) */
+.company-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; /* keep content above overlay */
+}
+
+/* card wrapper and base card style (mirrors clients) */
+.company-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+  margin-bottom: 20px;
+}
+
+.company-card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 12px;
+  padding: 24px;
+  border-left: 8px solid var(--teal);
+  box-shadow: 0 8px 22px rgba(15,23,42,0.06);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.company-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+}
+
+/* lead paragraph like clients */
+.company-card .lead {
+  color: var(--teal);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* paragraphs */
+.company-card p {
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+/* inline hero image inside content */
+.company-hero-image img {
+  width: 100%;
+  max-width: 960px;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 12px auto;
+}
+
+/* key persons list */
+.kp-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* individual KP wrapper uses the same fade animation (staggered inline) */
+.kp-wrapper {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeUp 0.7s ease forwards;
+}
+
+/* item card inside the kp wrapper (keeps white background) */
+.kp-item {
+  background: rgba(255,255,255,1);
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(12,18,24,0.04);
+}
+
+/* kp name and description styling */
+.kp-name {
+  color: var(--teal);
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.kp-desc {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 15.5px;
+}
+
+/* shared fadeUp keyframes (same as clients) */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* small responsive tweaks */
+@media (max-width: 880px) {
+  :root { --max-w: 980px; }
+  .company-title { font-size: 40px; }
+  .company-inner { padding: 0 12px; }
+}
+
+@media (max-width: 520px) {
+  :root { --max-w: 100%; --hero-h: 180px; }
+  .company-title { font-size: 28px; }
+  .company-card { padding: 18px; }
+  .kp-name { font-size: 16px; }
+  .kp-desc { font-size: 14px; }
+}
