@@ -3,6 +3,7 @@
   padding: 80px 6%;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 50px;
   color: white;
   position: relative;
@@ -30,11 +31,10 @@
   color: #facc15;
 }
 
-/* Left Side Mini Content */
+/* Mini left section */
 .feature-mini {
   display: flex;
   gap: 15px;
-  align-items: flex-start;
 }
 
 .mini-image {
@@ -56,7 +56,7 @@
   gap: 20px;
 }
 
-/* Right Side Promises */
+/* Right side promises */
 .feature-right {
   display: flex;
   flex-direction: column;
@@ -87,4 +87,93 @@
   padding: 8px;
   border-radius: 50%;
   font-size: 1.2rem;
+}
+
+/* =====================================================
+   📱 RESPONSIVE DESIGN
+   ===================================================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .feature-title {
+    font-size: 2.3rem;
+  }
+
+  .promise-box {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .feature-right {
+    margin-right: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .main-feature {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .feature-left {
+    align-items: center;
+  }
+
+  .feature-title {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  .feature-mini {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mini-image {
+    width: 160px;
+    height: 100px;
+  }
+
+  .mini-text {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .feature-right {
+    margin-top: 20px;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .promise-box {
+    width: 90%;
+    border-radius: 50px;
+    padding: 16px 20px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .feature-title {
+    font-size: 1.7rem;
+  }
+
+  .mini-image {
+    width: 140px;
+    height: 90px;
+  }
+
+  .promise-box {
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 40px;
+  }
+
+  .check-icon {
+    font-size: 1rem;
+    padding: 6px;
+  }
 }

@@ -5,6 +5,10 @@
   --gold: #facc15;
 }
 
+/* ===========================
+   HERO TITLE
+=========================== */
+
 .clients-hero-inner {
   width: 100%;
   max-width: var(--max-w);
@@ -17,52 +21,52 @@
   margin: 0;
   font-size: 44px;
   font-weight: 700;
-  color: #facc15;
+  color: var(--gold);
   letter-spacing: -0.5px;
 }
 
-/* CONTENT AREA */
+/* ===========================
+   MAIN CONTENT WRAPPER
+=========================== */
 .clients-content {
   position: relative;
   padding: 48px 20px 80px;
-  background: transparent;
   overflow: hidden;
   z-index: 1;
 }
 
-/* background image */
+/* Background image layer */
 .clients-content::before {
   content: "";
   position: absolute;
   top: 0;
   left: 50%;
-  width: 100vw;        /* FULL width of screen */
+  width: 100vw;
   height: 100%;
   transform: translateX(-50%);
-
-  background-image: url("/clients.jpg");  /* <-- your image path */
+  background-image: url("/clients.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
-  opacity: 0.5;       /* control opacity here */
+  opacity: 0.45;
   z-index: -1;
 }
-
 
 .clients-inner {
   max-width: var(--max-w);
   margin: 0 auto;
 }
 
-/* Client list */
+/* ===========================
+   CLIENT ITEMS
+=========================== */
+
 .clients-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 22px;
 }
 
-/* wide screens: two columns */
+/* 2 columns for large screens */
 @media (min-width: 880px) {
   .clients-list {
     grid-template-columns: 1fr 1fr;
@@ -70,6 +74,7 @@
   }
 }
 
+/* Card layout */
 .client-item {
   background: rgba(255,255,255,0.95);
   border-radius: 12px;
@@ -79,14 +84,14 @@
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-/* small hover lift on each item */
-.client-item:hover {
-  transform: translateY(-6%) scale(1.1);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
-  /* border-color: #000000; */
+/* Hover effect only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .client-item:hover {
+    transform: translateY(-6%) scale(1.04);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+  }
 }
 
-/* heading row: small numbered badge + client name */
 .client-name {
   display: flex;
   align-items: center;
@@ -94,47 +99,93 @@
   margin: 0 0 10px 0;
   font-size: 18px;
   color: #08303a;
-  line-height: 1.1;
 }
 
-/* index badge */
+/* Number index */
 .client-index {
-  display:inline-grid;
-  place-items:center;
-  width:42px;
-  height:42px;
-  border-radius:10px;
-  background: linear-gradient(180deg, rgba(24,183,179,0.95), rgba(24,183,179,0.85));
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--teal), rgba(24,183,179,0.85));
   color: white;
-  font-weight:700;
-  font-size:16px;
+  font-weight: 700;
+  font-size: 16px;
   box-shadow: 0 6px 18px rgba(24,183,179,0.12);
 }
 
-/* emphasized client name text */
+/* Client name text */
 .client-name-text {
   color: var(--teal);
   font-weight: 700;
   font-size: 22px;
 }
 
-/* description */
+/* Description */
 .client-desc {
   margin: 0;
   color: var(--muted);
   font-size: 18px;
-  line-height: 1.9;
+  line-height: 1.7;
   padding-right: 8px;
 }
 
-/* responsive tweaks */
-@media (max-width: 520px) {
-  .clients-title { font-size: 28px; }
-  .client-index { width:36px; height:36px; font-size:13px; }
-  .client-name-text { font-size:15px; }
-  .client-desc { font-size:14px; }
-  .clients-inner { padding: 0 6px; }
+/* ===========================
+   MOBILE STYLING
+=========================== */
+
+@media (max-width: 768px) {
+  .clients-title {
+    font-size: 34px;
+  }
+
+  .clients-content {
+    padding: 32px 14px 60px;
+  }
+
+  .client-item {
+    padding: 18px;
+  }
+
+  .client-name-text {
+    font-size: 18px;
+  }
+
+  .client-desc {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
+
+/* Small Phones */
+@media (max-width: 520px) {
+  .clients-title {
+    font-size: 28px;
+  }
+
+  .client-index {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  .client-name-text {
+    font-size: 15px;
+  }
+
+  .client-desc {
+    font-size: 14px;
+  }
+
+  .clients-inner {
+    padding: 0 6px;
+  }
+}
+
+/* ===========================
+   CARD FADE-UP ANIMATION
+=========================== */
 
 .client-wrapper {
   opacity: 0;

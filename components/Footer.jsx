@@ -53,11 +53,9 @@ export default function Footer() {
         <div className="footer-contact">
         <div className="footer-links">
           <h3>Explore</h3>
-          <a href="/services">Services</a>
-          <a href="/clients">Clients</a>
-          <a href="/contact">Contact</a>
-          {/* <a href="/privacy">Privacy Policy</a> */}
-          {/* <a href="/terms">Terms of Use</a> */}
+          <a href="/services/">Services</a>
+          <a href="/clients/">Clients</a>
+          <a href="/contact/">Contact</a>
         </div>
         </div>
 

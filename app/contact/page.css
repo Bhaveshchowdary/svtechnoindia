@@ -103,3 +103,40 @@
 .card-wrapper:nth-child(4) {
   animation-delay: 0.7s;
 }
+
+@media (max-width: 768px) {
+  .contacts-title {
+    font-size: 34px;
+    margin-bottom: 40px;
+  }
+
+  .contact-card h2 {
+    font-size: 22px;
+  }
+
+  .contact-card p {
+    font-size: 16px;
+  }
+
+  .card-grid {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-title {
+    font-size: 28px;
+  }
+
+  .contact-card {
+    padding: 20px 16px;
+  }
+
+  .contact-card h2 {
+    font-size: 20px;
+  }
+
+  .contact-card p {
+    font-size: 15px;
+  }
+}

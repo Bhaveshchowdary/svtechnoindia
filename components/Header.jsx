@@ -31,11 +31,11 @@ export default function Header() {
         {/* NAV LINKS */}
         <nav className="nav-links">
           <a href="/">Home</a>
-          <a href="/company">Company</a>
-          <a href="/services">Services</a>
-          <a href="/standards">Our Standards</a>
-          <a href="/clients">Our Clients</a>
-          <a href="/contact">Contact Us</a>
+          <a href="/company/">Company</a>
+          <a href="/services/">Services</a>
+          <a href="/standards/">Our Standards</a>
+          <a href="/clients/">Our Clients</a>
+          <a href="/contact/">Contact Us</a>
         </nav>
 
         {/* RIGHT SIDE ICONS */}

@@ -1,5 +1,7 @@
 "use client"
 
+
+import { useRouter } from "next/navigation"
 import { useState, useEffect } from "react"
 import "./HeroSlider.css"
 
@@ -35,6 +37,7 @@ export default function HeroSlider() {
     setIsFading(true)
   }
 
+  const router = useRouter();
   useEffect(() => {
     const timer = setInterval(() => next(), 6000)
     return () => clearInterval(timer)
@@ -64,7 +67,7 @@ export default function HeroSlider() {
 
       <div className="hero-content">
         <h1>{slides[index].text}</h1>
-        <button className="hero-btn">Discover More</button>
+        <button onClick={() => router.push("/standards/")} className="hero-btn">Discover More</button>
       </div>
 
       <div className="hero-arrows">
