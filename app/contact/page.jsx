@@ -15,13 +15,13 @@ const people = [
   },
   {
     name: "Mr. CH. Venkatesh",
-    phone: "945603286",
-    address: "H.no:1-794, Yanamalapalemnowabpet, Nellore-524004.DT (AP)"
+    phone: "9345603286",
+    address: "H.no:1-794, Yanamalapalem, nawabpeta, Nellore-524004.DT (AP)"
   },
   {
     name: "Mr. Ramesh Gadi",
-    phone: "91930003097",
-    address: "H.no:1-794, Yanamalapalemnowabpet, Nellore-524004.DT (AP)"
+    phone: "9908955084",
+    address: "H.no:1-794, Yanamalapalem, nawabpeta, Nellore-524004.DT (AP)"
   },
 ];
 

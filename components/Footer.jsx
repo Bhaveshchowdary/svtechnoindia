@@ -30,7 +30,7 @@ export default function Footer() {
             <p className="contact-title">Address</p>
             <p className="contact-value">
               1-794, Yanamalapalem,<br />
-              Navabu peta, Nellore – 524 002, AP
+              Nawabpeta, Nellore – 524 002, AP
             </p>
           </div>
         </div>

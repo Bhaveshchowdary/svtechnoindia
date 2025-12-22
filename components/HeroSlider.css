@@ -134,6 +134,7 @@
   .hero-btn {
     padding: 10px 22px;
     font-size: 0.95rem;
+    color: black;
   }
 
   .hero-arrows {
@@ -160,6 +161,7 @@
 
   .hero-btn {
     padding: 10px 20px;
+    color: black;
   }
 
   .arrow-btn {
